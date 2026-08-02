@@ -1,8 +1,7 @@
-#include "cfrost/structure.h"
-#include <cstdint>
-#include <iostream>
+#include "ant/executor.hpp"
+#include "ant/head.hpp"
 
-class ant
+class ant_object
 {
 private:
     ocf::vec<uint8_t> memory;
@@ -18,18 +17,18 @@ protected:
     }
 
 public:
-    ant() = default;
-    ~ant() = default;
-    ant(size_t value) noexcept : ptr(value)
+    ant_object() = default;
+    ~ant_object() = default;
+    ant_object(size_t value) noexcept : ptr(value)
     {
         for (iter_less(i, value))
         {
             memory.push_back(0);
         }
     }
-    ant(const ocf::vec<uint8_t> &list) noexcept : memory(list), ptr(0) {}
-    ant(const ant &other) noexcept : memory(other.memory), ptr(other.ptr) {}
-    ant(ocf::initList<uint8_t> list) noexcept
+    ant_object(const ocf::vec<uint8_t> &list) noexcept : memory(list), ptr(0) {}
+    ant_object(const ant_object &other) noexcept : memory(other.memory), ptr(other.ptr) {}
+    ant_object(ocf::initList<uint8_t> list) noexcept
     {
         for (uint8_t value : list)
         {
