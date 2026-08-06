@@ -38,6 +38,11 @@ main_command
             command.clear();
         }
     }
+    // extentions:
+    // *.ant
+    // *.ant.binary
+    // *.ant.ternary
+    // *.ant.bct -> bct: binary coded ternary
     else if(initCommand == "--run") {
         if (argc < 3) {
             std::cerr << "Usage: ant --run <file>\n";
