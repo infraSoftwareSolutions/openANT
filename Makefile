@@ -1,2 +1,2 @@
 main:
-	g++ -Iinclude -IC:/Users/User/OneDrive/Documents/GitHub/ISS/openCF/include -IC:/Users/User/OneDrive/Documents/GitHub/ISS/openANT/include src/ant.cpp -o bin/ant
+	g++ -IC:/Users/User/OneDrive/Documents/GitHub/ISS/openCF/include src/ant.cpp -o bin/ant
